@@ -1,3 +1,4 @@
+module Questao2 (myFloor, myCeil) where
 -- Questão 2
 
 -- Encontrar floor e ceil de um número x dentro de um array a. O número x pode não estar no array a. O floor(x) é o número do 

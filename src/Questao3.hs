@@ -1,10 +1,11 @@
+module Questao3 (MyStack(..), myStackPush, myStackPop, myStackPeek, myStackEmpty, myStackSearch) where
 -- Implementar uma pilha e seus algoritmos em Haskell. Use a lista de Haskell como estrutura sobrejacente e operações que não sejam acesso pelo índice.
 
-data MyStack s = Nil | MyStack [s] deriving (Show)
+data MyStack s = Nil | MyStack [s] deriving (Show, Eq)
 
 myStackPush e (MyStack xs) = MyStack (e:xs)
 
-myStackPop Nil = Nil
+myStackPop Nil = (Nil, Nil)
 myStackPop (MyStack []) = error "Lista Vazia, impossível remover elemento"
 myStackPop (MyStack (x:xs)) = (x, MyStack xs) 
 

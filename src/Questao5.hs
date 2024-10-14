@@ -1,8 +1,9 @@
+module Questao5 (Aluno(..), ListaAlunos(..), calculaMedia, myGroupBy, getCRA) where
 -- Um aluno é representado como uma estrutura contando matrícula, um primeiro nome, um sobrenome, período de ingresso e CRA.
 
 -- a ) Implemente a estrutura que representa um aluno
-data Aluno = Nil | Aluno String String String Int Float deriving (Show)
-data ListaAlunos = ListaAlunos [Aluno] deriving (Show)
+data Aluno = Nil | Aluno String String String Int Float deriving (Show, Eq)
+data ListaAlunos = ListaAlunos [Aluno] deriving (Show, Eq)
 
 --gets
 getMatricula (Aluno matricula _ _ _ _) = Just matricula
